@@ -6,39 +6,36 @@ import {GovHelpers} from 'aave-helpers/GovHelpers.sol';
 import {AaveGovernanceV2} from 'aave-address-book/AaveGovernanceV2.sol';
 import {AaveV3Basenet} from 'aave-address-book/AaveV3Basenet.sol';
 import {ProtocolV3TestBase, ReserveConfig} from 'aave-helpers/ProtocolV3TestBase.sol';
-import {AaveV3_BasenetActivation} from '../src/contracts/AaveV3_BasenetActivation.sol';
+import {AaveV3_BaseActivation} from '../src/contracts/AaveV3_BaseActivation.sol';
 import {ICapsPlusRiskSteward} from 'aave-helpers/riskstewards/ICapsPlusRiskSteward.sol';
 import {IAaveV3ConfigEngine} from 'aave-helpers/v3-config-engine/IAaveV3ConfigEngine.sol';
 
 /**
- * @dev Test for AaveV3_BasenetActivation
+ * @dev Test for AaveV3_BaseActivation
  */
-contract AaveV3_BasenetActivation_Test is ProtocolV3TestBase {
-  AaveV3_BasenetActivation internal proposal;
+contract AaveV3_BaseActivation_Test is ProtocolV3TestBase {
+  AaveV3_BaseActivation internal proposal;
   address public constant RISK_COUNCIL = 0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1;
 
   function setUp() public {
-    vm.createSelectFork(vm.rpcUrl('basenet'), 2480613);
-    proposal = new AaveV3_BasenetActivation();
+    vm.createSelectFork(vm.rpcUrl('base'), 2480613);
+    proposal = new AaveV3_BaseActivation();
   }
 
   function testProposalExecution() public {
     ReserveConfig[] memory allConfigsBefore = createConfigurationSnapshot(
-      'preAaveV3_Basenet_BasenetActivation_20230811',
+      'preAaveV3_Base_BaseActivation',
       AaveV3Basenet.POOL
     );
 
     GovHelpers.executePayload(vm, address(proposal), AaveGovernanceV2.BASENET_BRIDGE_EXECUTOR);
 
     ReserveConfig[] memory allConfigsAfter = createConfigurationSnapshot(
-      'postAaveV3_Basenet_BasenetActivation_20230811',
+      'postAaveV3_Base_BaseActivation',
       AaveV3Basenet.POOL
     );
 
-    diffReports(
-      'preAaveV3_Basenet_BasenetActivation_20230811',
-      'postAaveV3_Basenet_BasenetActivation_20230811'
-    );
+    // diffReports('preAaveV3_Basenet_BasenetActivation', 'postAaveV3_Basenet_BasenetActivation');
 
     e2eTest(AaveV3Basenet.POOL);
 

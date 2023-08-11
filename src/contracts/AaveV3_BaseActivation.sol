@@ -11,7 +11,7 @@ import {IPriceOracleSentinel} from 'aave-v3-core/contracts/interfaces/IPriceOrac
  * - Snapshot: TODO
  * - Discussion: TODO
  */
-contract AaveV3_BasenetActivation is AaveV3PayloadBasenet {
+contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
   address public constant WETH = 0x4200000000000000000000000000000000000006;
   address public constant WETH_PRICE_FEED = 0x71041dddad3595F9CEd3DcCFBe3D1F4b0a16Bb70;
 
@@ -36,8 +36,8 @@ contract AaveV3_BasenetActivation is AaveV3PayloadBasenet {
 
     eModeUpdates[0] = IEngine.EModeCategoryUpdate({
       eModeCategory: 1,
-      ltv: 93_00,
-      liqThreshold: 90_00,
+      ltv: 90_00,
+      liqThreshold: 93_00,
       liqBonus: 2_00,
       priceSource: address(0),
       label: 'ETH correlated'
@@ -172,6 +172,8 @@ contract AaveV3_BasenetActivation is AaveV3PayloadBasenet {
       liqProtocolFee: 10_00,
       eModeCategory: 0
     });
+
+    return listings;
   }
 
   function _postExecute() internal override {
