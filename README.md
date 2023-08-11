@@ -1,24 +1,41 @@
-# BGD forge template
+## Summary
 
-Basic template with prettier and rest configuration
+This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.2) by completing all the initial setup and listing WETH, USDbC, wstETH and cbETH as suggested by the risk service providers (Gauntlet and Chaos Labs) on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708/10). All the Aave Base V3 addresses can be found in the [aave-address-book](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Basenet.sol).
 
-To create a new project using this template run
+## Specification
 
-```shell
-$ forge init --template bgd-labs/bgd-forge-template my_new_project
-```
+|                          | WETH           | wstETH         | USDC      | cbETH          |
+| ------------------------ | -------------- | -------------- | --------- | -------------- |
+| Isolation Mode           | NO             | NO             | NO        | NO             |
+| Enable Borrow            | YES            | YES            | YES       | YES            |
+| Enable Collateral        | YES            | YES            | YES       | YES            |
+| Emode Category           | eth-correlated | eth-correlated | N/A       | eth-correlated |
+| Loan To Value            | 80%            | 78.5%          | 77%       | 67%            |
+| Liquidation Threshold    | 83%            | 81%            | 80%       | 74%            |
+| Liquidation Bonus        | 5%             | 7.5%           | 5%        | 7.5%           |
+| Reserve Factor           | 15%            | 15%            | 10%       | 15%            |
+| Liquidation Protocol Fee | 10%            | 10%            | 10%       | 10%            |
+| Supply Cap               | 200            | 100            | 1,000,000 | 100            |
+| Borrow Cap               | 160            | 20             | 800,000   | 20             |
+| Debt Ceiling             | N/A            | N/A            | N/A       | N/A            |
+| uOptimal                 | 80%            | 45%            | 90%       | 45%            |
+| Base                     | 0%             | 0%             | 0%        | 0%             |
+| Slope1                   | 3.8%           | 4.5%           | 4%        | 7%             |
+| Slope2                   | 80%            | 80%            | 60%       | 300%           |
+| Stable Borrowing         | Disabled       | Disabled       | Disabled  | Disabled       |
+| Flahloanable             | YES            | YES            | YES       | YES            |
+| Siloed Borrowing         | NO             | NO             | NO        | NO             |
+| Borrowed in Isolation    | NO             | NO             | YES       | NO             |
 
-## Recommended modules
+**E-Mode:**
 
-[bgd-labs/solidity-utils](https://github.com/bgd-labs/solidity-utils) - common contracts we use everywhere, ie transparent proxy and around
+| Category       | Assets included     | LT  | LTV | Liquidation Bonus |
+| -------------- | ------------------- | --- | --- | ----------------- |
+| eth-correlated | WETH, wstETH, cbETH | 93% | 90% | 2%                |
 
-[bgd-labs/aave-address-book](https://github.com/bgd-labs/aave-address-book) - the best and only source about all deployed Aave ecosystem related contracts across all the chains
+cbEth adapter: [0x80f2c02224a2E548FC67c0bF705eBFA825dd5439](https://basescan.org/address/0x80f2c02224a2e548fc67c0bf705ebfa825dd5439)
 
-[bgd-labs/aave-helpers](https://github.com/bgd-labs/aave-helpers) - useful utils for integration, and not only testing related to Aave ecosystem contracts
-
-[Rari-Capital/solmate](https://github.com/Rari-Capital/solmate) - one of the best sources of base contracts for ERC20, ERC21, which will work with transparent proxy pattern out of the box
-
-[OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) - another very reputable and well organized source of base contracts for tokens, access control and many others
+wstEth adapter: [0x945fD405773973d286De54E44649cc0d9e264F78](https://basescan.org/address/0x945fd405773973d286de54e44649cc0d9e264f78)
 
 ## Development
 
