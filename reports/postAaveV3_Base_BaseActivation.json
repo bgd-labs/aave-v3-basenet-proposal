@@ -126,7 +126,7 @@
       "oracleDecimals": 8,
       "oracleDescription": "USDC / USD",
       "oracleLatestAnswer": 100000000,
-      "reserveFactor": 1500,
+      "reserveFactor": 1000,
       "stableBorrowRateEnabled": false,
       "stableDebtToken": "0xBBaDd47fbaFa9dE717FE203e4707DEB893C64654",
       "stableDebtTokenImpl": "0xe0b9B4f959fa8B52B7228c8D78875482b8813349",

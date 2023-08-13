@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {AaveV3PayloadBasenet, IEngine, Rates, EngineFlags} from 'aave-helpers/v3-config-engine/AaveV3PayloadBasenet.sol';
-import {AaveV3Basenet} from 'aave-address-book/AaveV3Basenet.sol';
+import {AaveV3Base} from 'aave-address-book/AaveV3Base.sol';
 import {IPriceOracleSentinel} from 'aave-v3-core/contracts/interfaces/IPriceOracleSentinel.sol';
 
 /**
@@ -165,7 +165,7 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
       ltv: 77_00,
       liqThreshold: 80_00,
       liqBonus: 5_00,
-      reserveFactor: 15_00,
+      reserveFactor: 10_00,
       supplyCap: 1_000_000,
       borrowCap: 800_000,
       debtCeiling: 0,
@@ -177,8 +177,8 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
   }
 
   function _postExecute() internal override {
-    AaveV3Basenet.ACL_MANAGER.addRiskAdmin(AaveV3Basenet.CAPS_PLUS_RISK_STEWARD);
+    AaveV3Base.ACL_MANAGER.addRiskAdmin(AaveV3Base.CAPS_PLUS_RISK_STEWARD);
 
-    AaveV3Basenet.POOL_ADDRESSES_PROVIDER.setPriceOracleSentinel(PRICE_ORACLE_SENTINEL);
+    AaveV3Base.POOL_ADDRESSES_PROVIDER.setPriceOracleSentinel(PRICE_ORACLE_SENTINEL);
   }
 }

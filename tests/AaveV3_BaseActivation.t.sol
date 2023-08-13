@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import 'forge-std/Test.sol';
 import {GovHelpers} from 'aave-helpers/GovHelpers.sol';
 import {AaveGovernanceV2} from 'aave-address-book/AaveGovernanceV2.sol';
-import {AaveV3Basenet} from 'aave-address-book/AaveV3Basenet.sol';
+import {AaveV3Base} from 'aave-address-book/AaveV3Base.sol';
 import {ProtocolV3TestBase, ReserveConfig} from 'aave-helpers/ProtocolV3TestBase.sol';
 import {AaveV3_BaseActivation} from '../src/contracts/AaveV3_BaseActivation.sol';
 import {ICapsPlusRiskSteward} from 'aave-helpers/riskstewards/ICapsPlusRiskSteward.sol';
@@ -25,31 +25,31 @@ contract AaveV3_BaseActivation_Test is ProtocolV3TestBase {
   function testProposalExecution() public {
     ReserveConfig[] memory allConfigsBefore = createConfigurationSnapshot(
       'preAaveV3_Base_BaseActivation',
-      AaveV3Basenet.POOL
+      AaveV3Base.POOL
     );
 
-    GovHelpers.executePayload(vm, address(proposal), AaveGovernanceV2.BASENET_BRIDGE_EXECUTOR);
+    GovHelpers.executePayload(vm, address(proposal), AaveGovernanceV2.BASE_BRIDGE_EXECUTOR);
 
     ReserveConfig[] memory allConfigsAfter = createConfigurationSnapshot(
       'postAaveV3_Base_BaseActivation',
-      AaveV3Basenet.POOL
+      AaveV3Base.POOL
     );
 
-    // diffReports('preAaveV3_Basenet_BasenetActivation', 'postAaveV3_Basenet_BasenetActivation');
+    // diffReports('preAaveV3_Base_BaseActivation', 'postAaveV3_Base_BaseActivation');
 
-    e2eTest(AaveV3Basenet.POOL);
+    e2eTest(AaveV3Base.POOL);
 
     assertEq(
       address(proposal.PRICE_ORACLE_SENTINEL()),
-      AaveV3Basenet.POOL_ADDRESSES_PROVIDER.getPriceOracleSentinel()
+      AaveV3Base.POOL_ADDRESSES_PROVIDER.getPriceOracleSentinel()
     );
 
     testIncreaseCapsMax();
   }
 
   function testIncreaseCapsMax() internal {
-    address[] memory reserves = AaveV3Basenet.POOL.getReservesList();
-    (uint256 borrowCapBefore, uint256 supplyCapBefore) = AaveV3Basenet
+    address[] memory reserves = AaveV3Base.POOL.getReservesList();
+    (uint256 borrowCapBefore, uint256 supplyCapBefore) = AaveV3Base
       .AAVE_PROTOCOL_DATA_PROVIDER
       .getReserveCaps(reserves[0]);
 
@@ -60,12 +60,12 @@ contract AaveV3_BaseActivation_Test is ProtocolV3TestBase {
       borrowCap: borrowCapBefore * 2
     });
 
-    ICapsPlusRiskSteward steward = ICapsPlusRiskSteward(AaveV3Basenet.CAPS_PLUS_RISK_STEWARD);
+    ICapsPlusRiskSteward steward = ICapsPlusRiskSteward(AaveV3Base.CAPS_PLUS_RISK_STEWARD);
 
     vm.startPrank(RISK_COUNCIL);
     steward.updateCaps(capUpdates);
 
-    (uint256 borrowCapAfter, uint256 supplyCapAfter) = AaveV3Basenet
+    (uint256 borrowCapAfter, uint256 supplyCapAfter) = AaveV3Base
       .AAVE_PROTOCOL_DATA_PROVIDER
       .getReserveCaps(reserves[0]);
 
