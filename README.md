@@ -10,7 +10,11 @@ Aave community has approved the expansion on the [governance forum](https://gove
 
 ## Specification
 
-The proposal will set Risk Steward as the risk admin by executing `ACL_MANAGER.addRiskAdmin()`, set price oracle sentinel with `POOL_ADDRESSES_PROVIDER.setPriceOracleSentinel()` and will list the following assets on Aave V3 on Base: wETH, cbETH, and USDC.
+The proposal will do the following:
+
+- set risk steward as the risk admin by executing `ACL_MANAGER.addRiskAdmin()`
+- set price oracle sentinel with `POOL_ADDRESSES_PROVIDER.setPriceOracleSentinel()`
+- list the following assets on Aave V3 on Base: wETH, cbETH, and USDC.
 
 The table below illustrates the initial suggested risk parameters for each asset, a combination of reccomendations provided by Gauntlet and ChaosLabs.
 
