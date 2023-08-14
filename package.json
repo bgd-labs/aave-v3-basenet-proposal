@@ -16,6 +16,7 @@
     "url": "https://github.com/bgd-labs/bgd-forge-template/issues"
   },
   "homepage": "https://github.com/bgd-labs/bgd-forge-template#readme",
+  "type": "module",
   "devDependencies": {
     "@bgd-labs/aave-tenderly-cli": "^0.0.13",
     "env-cmd": "^10.1.0",
