@@ -2,21 +2,17 @@
 
 This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.2) by completing all the initial setup and listing WETH, USDbC and cbETH as suggested by the risk service providers (Gauntlet and Chaos Labs) on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708/10). All the Aave Base V3 addresses can be found in the [aave-address-book](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Base.sol).
 
-This deployment aims to expand Aave to a new ecosystem, capturing the growth and infrastructure allowed by Coinbase’s products and distribution -- providing new opportunities for both ecosystems.
-
 ## Motivation
 
 By enabling Base on Aave, it creates valuable (and differentiated) revenue opportunities for Aave, capturing the growth and interest of users who live on the Coinbase platform.
 
-This allows Aave to leverage Coinbase integrations, fiat onramps, and access to 110mm+ users and $80B+ assets in the Coinbase ecosystem.
-
-For Base, deploying Aave V3's codebase expands the on-chain experience by fostering a diversity of DeFi platforms and introducing trusted, flagship lending protocols.
+Aave community has approved the expansion on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708) and [snapshot](https://snapshot.org/#/aave.eth/proposal/0xa8b018962096aa1fc22446a395d4298ebb6ca10094f35d072fbb02048e3b5eab).
 
 ## Specification
 
-The ARFC suggests deploying Aave V3 on Base with the following assets for collateral: wETH, cbETH, and USDC.
+The proposal will set Risk Steward as the risk admin by executing `ACL_MANAGER.addRiskAdmin()`, set price oracle sentinel with `POOL_ADDRESSES_PROVIDER.setPriceOracleSentinel()` and will list the following assets on Aave V3 on Base: wETH, cbETH, and USDC.
 
-The table below illustrates the initial suggested risk parameters for each asset, a combination of reccomendations provided by @Gauntlet and @ChaosLabs.
+The table below illustrates the initial suggested risk parameters for each asset, a combination of reccomendations provided by Gauntlet and ChaosLabs.
 
 |                          | WETH           | USDC      | cbETH          |
 | ------------------------ | -------------- | --------- | -------------- |
@@ -50,6 +46,20 @@ The table below illustrates the initial suggested risk parameters for each asset
 cbEth adapter: [0x80f2c02224a2E548FC67c0bF705eBFA825dd5439](https://basescan.org/address/0x80f2c02224a2e548fc67c0bf705ebfa825dd5439)
 
 wstEth adapter: [0x945fD405773973d286De54E44649cc0d9e264F78](https://basescan.org/address/0x945fd405773973d286de54e44649cc0d9e264f78)
+
+Price oracle sentinel: [0xe34949A48cd2E6f5CD41753e449bd2d43993C9AC](https://basescan.org/address/0xe34949A48cd2E6f5CD41753e449bd2d43993C9AC)
+
+Risk Steward: [0x12DEB4025b79f2B43f6aeF079F9D77C3f9a67bb6](https://basescan.org/address/0x12DEB4025b79f2B43f6aeF079F9D77C3f9a67bb6)
+
+## Security
+
+The proposal execution is simulated within the [tests](https://github.com/bgd-labs/aave-v3-basenet-proposal/blob/main/tests/AaveV3_BaseActivation.t.sol) and the resulting pool configuration is tested for correctness.
+
+The deployed pool and other permissions have been programmatically verified.
+
+In addition, we have also checked the code diffs of the deployed metis contracts with the deployed contracts on Ethereum and other networks.
+
+As a matter of caution, the POOL_ADMIN role will be given for the first weeks to the Aave Guardian multisig.
 
 ## Development
 
