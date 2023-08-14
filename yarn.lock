@@ -34,17 +34,17 @@
     chalk "^2.4.2"
     js-tokens "^4.0.0"
 
-"@bgd-labs/aave-address-book@^1.31.4":
-  version "1.31.6"
-  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-address-book/-/aave-address-book-1.31.6.tgz#573f49e055993c3c6c1319d66f89a133a2d444d4"
-  integrity sha512-KH0FYXZ3xR19ydtD+iSmuLu5aYlUsjBruoFiU0Vl0Qasq8tNR+VKIeDRJxQjh5CXnAd9RKekV4ryH64p9evpNg==
+"@bgd-labs/aave-address-book@^1.32.0":
+  version "1.32.0"
+  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-address-book/-/aave-address-book-1.32.0.tgz#5f613ff325cd56c43fd63bed2d04765c18983d60"
+  integrity sha512-hrxe194835T6zpna5I9mVEZ935WdaSicgfGZLpHppKxnEcte7fZD1aHahJTULscecep8fj4qDXi1aEmVM4/MFw==
 
-"@bgd-labs/aave-cli@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-cli/-/aave-cli-0.0.18.tgz#c737ffbc335ed94f5ed1557ed3d717c2c79a41b2"
-  integrity sha512-YdqL27D/1Z7F/OuKwGmHoBYKWPYRCNE9ddZYhFVuNKOoyCbuF4iO3JKREa7VJKZBj/ill7xWsySbbYP3kDwVUw==
+"@bgd-labs/aave-cli@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-cli/-/aave-cli-0.0.19.tgz#767a32986b51deab7c9e69a390a5fb0ec7c793af"
+  integrity sha512-mjESSUiSeXXwwvcilLmyXI9f07aw2VN99ponqZ1bfl31qSG/WHza26+hetCjNOg1wKflvq38O8usiIJrCHVvlA==
   dependencies:
-    "@bgd-labs/aave-address-book" "^1.31.4"
+    "@bgd-labs/aave-address-book" "^1.32.0"
     bs58 "^5.0.0"
     chalk "^4.1.2"
     dotenv "^16.3.1"
@@ -309,9 +309,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=13.7.0", "@types/node@^20.4.8":
-  version "20.4.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.10.tgz#73c9480791e3ddeb4887a660fc93a7f59353ad45"
-  integrity sha512-vwzFiiy8Rn6E0MtA13/Cxxgpan/N6UeNYR9oUu6kuJWxu6zCk98trcDp8CBhbtaeuq9SykCmXkFr2lWLoPcvLg==
+  version "20.5.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.0.tgz#7fc8636d5f1aaa3b21e6245e97d56b7f56702313"
+  integrity sha512-Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"

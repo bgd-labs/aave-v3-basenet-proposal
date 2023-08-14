@@ -1,37 +1,37 @@
 ## Summary
 
-This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.2) by completing all the initial setup and listing WETH, USDbC, wstETH and cbETH as suggested by the risk service providers (Gauntlet and Chaos Labs) on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708/10). All the Aave Base V3 addresses can be found in the [aave-address-book](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Basenet.sol).
+This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.2) by completing all the initial setup and listing WETH, USDbC, wstETH and cbETH as suggested by the risk service providers (Gauntlet and Chaos Labs) on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708/10). All the Aave Base V3 addresses can be found in the [aave-address-book](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Base.sol).
 
 ## Specification
 
-|                          | WETH           | wstETH         | USDC      | cbETH          |
-| ------------------------ | -------------- | -------------- | --------- | -------------- |
-| Isolation Mode           | NO             | NO             | NO        | NO             |
-| Enable Borrow            | YES            | YES            | YES       | YES            |
-| Enable Collateral        | YES            | YES            | YES       | YES            |
-| Emode Category           | eth-correlated | eth-correlated | N/A       | eth-correlated |
-| Loan To Value            | 80%            | 78.5%          | 77%       | 67%            |
-| Liquidation Threshold    | 83%            | 81%            | 80%       | 74%            |
-| Liquidation Bonus        | 5%             | 7.5%           | 5%        | 7.5%           |
-| Reserve Factor           | 15%            | 15%            | 10%       | 15%            |
-| Liquidation Protocol Fee | 10%            | 10%            | 10%       | 10%            |
-| Supply Cap               | 200            | 100            | 1,000,000 | 100            |
-| Borrow Cap               | 160            | 20             | 800,000   | 20             |
-| Debt Ceiling             | N/A            | N/A            | N/A       | N/A            |
-| uOptimal                 | 80%            | 45%            | 90%       | 45%            |
-| Base                     | 0%             | 0%             | 0%        | 0%             |
-| Slope1                   | 3.8%           | 4.5%           | 4%        | 7%             |
-| Slope2                   | 80%            | 80%            | 60%       | 300%           |
-| Stable Borrowing         | Disabled       | Disabled       | Disabled  | Disabled       |
-| Flahloanable             | YES            | YES            | YES       | YES            |
-| Siloed Borrowing         | NO             | NO             | NO        | NO             |
-| Borrowed in Isolation    | NO             | NO             | YES       | NO             |
+|                          | WETH           | USDC      | cbETH          |
+| ------------------------ | -------------- | --------- | -------------- |
+| Isolation Mode           | NO             | NO        | NO             |
+| Enable Borrow            | YES            | YES       | YES            |
+| Enable Collateral        | YES            | YES       | YES            |
+| Emode Category           | eth-correlated | N/A       | eth-correlated |
+| Loan To Value            | 80%            | 77%       | 67%            |
+| Liquidation Threshold    | 83%            | 80%       | 74%            |
+| Liquidation Bonus        | 5%             | 5%        | 7.5%           |
+| Reserve Factor           | 15%            | 10%       | 15%            |
+| Liquidation Protocol Fee | 10%            | 10%       | 10%            |
+| Supply Cap               | 200            | 1,000,000 | 100            |
+| Borrow Cap               | 160            | 800,000   | 20             |
+| Debt Ceiling             | N/A            | N/A       | N/A            |
+| uOptimal                 | 80%            | 90%       | 45%            |
+| Base                     | 0%             | 0%        | 0%             |
+| Slope1                   | 3.8%           | 4%        | 7%             |
+| Slope2                   | 80%            | 60%       | 300%           |
+| Stable Borrowing         | Disabled       | Disabled  | Disabled       |
+| Flahloanable             | YES            | YES       | YES            |
+| Siloed Borrowing         | NO             | NO        | NO             |
+| Borrowed in Isolation    | NO             | YES       | NO             |
 
 **E-Mode:**
 
-| Category       | Assets included     | LT  | LTV | Liquidation Bonus |
-| -------------- | ------------------- | --- | --- | ----------------- |
-| eth-correlated | WETH, wstETH, cbETH | 93% | 90% | 2%                |
+| Category       | Assets included | LT  | LTV | Liquidation Bonus |
+| -------------- | --------------- | --- | --- | ----------------- |
+| eth-correlated | WETH, cbETH     | 93% | 90% | 2%                |
 
 cbEth adapter: [0x80f2c02224a2E548FC67c0bF705eBFA825dd5439](https://basescan.org/address/0x80f2c02224a2e548fc67c0bf705ebfa825dd5439)
 

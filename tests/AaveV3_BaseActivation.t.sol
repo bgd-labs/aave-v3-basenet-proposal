@@ -23,17 +23,11 @@ contract AaveV3_BaseActivation_Test is ProtocolV3TestBase {
   }
 
   function testProposalExecution() public {
-    ReserveConfig[] memory allConfigsBefore = createConfigurationSnapshot(
-      'preAaveV3_Base_BaseActivation',
-      AaveV3Base.POOL
-    );
+    createConfigurationSnapshot('preAaveV3_Base_BaseActivation', AaveV3Base.POOL);
 
     GovHelpers.executePayload(vm, address(proposal), AaveGovernanceV2.BASE_BRIDGE_EXECUTOR);
 
-    ReserveConfig[] memory allConfigsAfter = createConfigurationSnapshot(
-      'postAaveV3_Base_BaseActivation',
-      AaveV3Base.POOL
-    );
+    createConfigurationSnapshot('postAaveV3_Base_BaseActivation', AaveV3Base.POOL);
 
     diffReports('preAaveV3_Base_BaseActivation', 'postAaveV3_Base_BaseActivation');
 

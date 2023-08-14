@@ -15,9 +15,6 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
   address public constant WETH = 0x4200000000000000000000000000000000000006;
   address public constant WETH_PRICE_FEED = 0x71041dddad3595F9CEd3DcCFBe3D1F4b0a16Bb70;
 
-  // address public constant wstETH = 0x0;
-  // address public constant wstETH_PRICE_FEED = 0x945fD405773973d286De54E44649cc0d9e264F78;
-
   address public constant cbETH = 0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22;
   address public constant cbETH_PRICE_FEED = 0x80f2c02224a2E548FC67c0bF705eBFA825dd5439;
 
@@ -28,7 +25,7 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
 
   function eModeCategoriesUpdates()
     public
-    view
+    pure
     override
     returns (IEngine.EModeCategoryUpdate[] memory)
   {
@@ -79,37 +76,6 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
       liqProtocolFee: 10_00,
       eModeCategory: 1
     });
-
-    // listings[1] = IEngine.Listing({
-    //   asset: wstETH,
-    //   assetSymbol: 'wstETH',
-    //   priceFeed: WSTETH_PRICE_FEED,
-    //   rateStrategyParams: Rates.RateStrategyParams({
-    //     optimalUsageRatio: _bpsToRay(45_00),
-    //     baseVariableBorrowRate: 0,
-    //     variableRateSlope1: _bpsToRay(4_50),
-    //     variableRateSlope2: _bpsToRay(80_00),
-    //     stableRateSlope1: _bpsToRay(4_00),
-    //     stableRateSlope2: _bpsToRay(80_00),
-    //     baseStableRateOffset: _bpsToRay(3_00),
-    //     stableRateExcessOffset: _bpsToRay(5_00),
-    //     optimalStableToTotalDebtRatio: _bpsToRay(20_00)
-    //   }),
-    //   enabledToBorrow: EngineFlags.ENABLED,
-    //   stableRateModeEnabled: EngineFlags.DISABLED,
-    //   borrowableInIsolation: EngineFlags.DISABLED,
-    //   withSiloedBorrowing: EngineFlags.DISABLED,
-    //   flashloanable: EngineFlags.ENABLED,
-    //   ltv: 78_50,
-    //   liqThreshold: 81_00,
-    //   liqBonus: 7_50,
-    //   reserveFactor: 15_00,
-    //   supplyCap: 100,
-    //   borrowCap: 20,
-    //   debtCeiling: 0,
-    //   liqProtocolFee: 10_00,
-    //   eModeCategory: 1
-    // });
 
     listings[1] = IEngine.Listing({
       asset: cbETH,
