@@ -8,8 +8,8 @@ import {IPriceOracleSentinel} from 'aave-v3-core/contracts/interfaces/IPriceOrac
 /**
  * @title Basenet Activation
  * @author BGD labs
- * - Snapshot: TODO
- * - Discussion: TODO
+ * - Snapshot: https://snapshot.org/#/aave.eth/proposal/0xa8b018962096aa1fc22446a395d4298ebb6ca10094f35d072fbb02048e3b5eab
+ * - Discussion: https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708
  */
 contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
   address public constant WETH = 0x4200000000000000000000000000000000000006;
