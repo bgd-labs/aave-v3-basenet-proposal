@@ -1,8 +1,22 @@
 ## Summary
 
-This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.2) by completing all the initial setup and listing WETH, USDbC, wstETH and cbETH as suggested by the risk service providers (Gauntlet and Chaos Labs) on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708/10). All the Aave Base V3 addresses can be found in the [aave-address-book](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Base.sol).
+This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.2) by completing all the initial setup and listing WETH, USDbC and cbETH as suggested by the risk service providers (Gauntlet and Chaos Labs) on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708/10). All the Aave Base V3 addresses can be found in the [aave-address-book](https://github.com/bgd-labs/aave-address-book/blob/main/src/AaveV3Base.sol).
+
+This deployment aims to expand Aave to a new ecosystem, capturing the growth and infrastructure allowed by Coinbase’s products and distribution -- providing new opportunities for both ecosystems.
+
+## Motivation
+
+By enabling Base on Aave, it creates valuable (and differentiated) revenue opportunities for Aave, capturing the growth and interest of users who live on the Coinbase platform.
+
+This allows Aave to leverage Coinbase integrations, fiat onramps, and access to 110mm+ users and $80B+ assets in the Coinbase ecosystem.
+
+For Base, deploying Aave V3's codebase expands the on-chain experience by fostering a diversity of DeFi platforms and introducing trusted, flagship lending protocols.
 
 ## Specification
+
+The ARFC suggests deploying Aave V3 on Base with the following assets for collateral: wETH, cbETH, and USDC.
+
+The table below illustrates the initial suggested risk parameters for each asset, a combination of reccomendations provided by @Gauntlet and @ChaosLabs.
 
 |                          | WETH           | USDC      | cbETH          |
 | ------------------------ | -------------- | --------- | -------------- |
