@@ -34,26 +34,26 @@
     chalk "^2.4.2"
     js-tokens "^4.0.0"
 
-"@bgd-labs/aave-address-book@^1.28.0":
-  version "1.31.4"
-  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-address-book/-/aave-address-book-1.31.4.tgz#8938634d849356416949728fda2487f867edc9cf"
-  integrity sha512-k3BEtKmo9PjwsMJHxJvsTkSB9IKdEwQSlsGQkbqLb4RwFGbrNAX3ScNUzAhWM0ipj5Q2wORL5VrjAxshkezISw==
+"@bgd-labs/aave-address-book@^1.31.4":
+  version "1.31.6"
+  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-address-book/-/aave-address-book-1.31.6.tgz#573f49e055993c3c6c1319d66f89a133a2d444d4"
+  integrity sha512-KH0FYXZ3xR19ydtD+iSmuLu5aYlUsjBruoFiU0Vl0Qasq8tNR+VKIeDRJxQjh5CXnAd9RKekV4ryH64p9evpNg==
 
-"@bgd-labs/aave-cli@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-cli/-/aave-cli-0.0.17.tgz#788baf49234f2048fb61435a93c3b17e98de595f"
-  integrity sha512-vdNN3QoRP0uclXAKxgY8SvxJIxTcCnHQfsjp2/dsWGIR96zbxzVtwELSjbImT1mO8Pq27zYBQwgyEujXaw2ubQ==
+"@bgd-labs/aave-cli@^0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@bgd-labs/aave-cli/-/aave-cli-0.0.18.tgz#c737ffbc335ed94f5ed1557ed3d717c2c79a41b2"
+  integrity sha512-YdqL27D/1Z7F/OuKwGmHoBYKWPYRCNE9ddZYhFVuNKOoyCbuF4iO3JKREa7VJKZBj/ill7xWsySbbYP3kDwVUw==
   dependencies:
-    "@bgd-labs/aave-address-book" "^1.28.0"
+    "@bgd-labs/aave-address-book" "^1.31.4"
     bs58 "^5.0.0"
     chalk "^4.1.2"
-    dotenv "^16.0.3"
+    dotenv "^16.3.1"
     gray-matter "^4.0.3"
     ipfs-only-hash "^4.0.0"
     json-bigint "^1.0.0"
     node-fetch "^2.6.9"
     object-hash "^3.0.0"
-    viem "^1.0.7"
+    viem "^1.6.0"
     yargs "^17.7.2"
     zod "^3.21.4"
 
@@ -309,9 +309,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=13.7.0", "@types/node@^20.4.8":
-  version "20.4.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.9.tgz#c7164e0f8d3f12dfae336af0b1f7fdec8c6b204f"
-  integrity sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==
+  version "20.4.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.10.tgz#73c9480791e3ddeb4887a660fc93a7f59353ad45"
+  integrity sha512-vwzFiiy8Rn6E0MtA13/Cxxgpan/N6UeNYR9oUu6kuJWxu6zCk98trcDp8CBhbtaeuq9SykCmXkFr2lWLoPcvLg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -555,7 +555,7 @@ decamelize@^1.1.0, decamelize@^1.2.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==
 
-dotenv@^16.0.3:
+dotenv@^16.3.1:
   version "16.3.1"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
   integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
@@ -1102,9 +1102,9 @@ prettier@^2.8.3:
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
 protobufjs@^6.10.2:
-  version "6.11.3"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.3.tgz#637a527205a35caa4f3e2a9a4a13ddffe0e7af74"
-  integrity sha512-xL96WDdCZYdU7Slin569tFX712BxsxslWwAfAhCYjQKGTq7dAU91Lomy6nLLhh/dyGhk/YH4TwTSRxTzhuHyZg==
+  version "6.11.4"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.4.tgz#29a412c38bf70d89e537b6d02d904a6f448173aa"
+  integrity sha512-5kQWPaJHi1WoCpjTGszzQ32PG2F4+wRY6BmAT4Vfw56Q2FZ4YZzK20xUYQH4YkfehY1e6QSICrJquM6xXZNcrw==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
@@ -1408,7 +1408,7 @@ varint@^6.0.0:
   resolved "https://registry.yarnpkg.com/varint/-/varint-6.0.0.tgz#9881eb0ce8feaea6512439d19ddf84bf551661d0"
   integrity sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==
 
-viem@^1.0.7, viem@^1.2.9:
+viem@^1.2.9, viem@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/viem/-/viem-1.6.0.tgz#8befa678c3ac79b9558dfd1708130b2ecb1994f4"
   integrity sha512-ae9Twkd0q2Qlj4yYpWjb4DzYAhKY0ibEpRH8FJaTywZXNpTjFidSdBaT0CVn1BaH7O7cnX4/O47zvDUMGJD1AA==

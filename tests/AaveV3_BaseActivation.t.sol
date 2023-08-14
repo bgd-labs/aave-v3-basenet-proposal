@@ -35,7 +35,7 @@ contract AaveV3_BaseActivation_Test is ProtocolV3TestBase {
       AaveV3Base.POOL
     );
 
-    // diffReports('preAaveV3_Base_BaseActivation', 'postAaveV3_Base_BaseActivation');
+    diffReports('preAaveV3_Base_BaseActivation', 'postAaveV3_Base_BaseActivation');
 
     e2eTest(AaveV3Base.POOL);
 
