@@ -87,7 +87,7 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
         variableRateSlope1: _bpsToRay(7_00),
         variableRateSlope2: _bpsToRay(300_00),
         stableRateSlope1: _bpsToRay(4_00),
-        stableRateSlope2: _bpsToRay(80_00),
+        stableRateSlope2: _bpsToRay(300_00),
         baseStableRateOffset: _bpsToRay(3_00),
         stableRateExcessOffset: _bpsToRay(5_00),
         optimalStableToTotalDebtRatio: _bpsToRay(20_00)

@@ -9,8 +9,8 @@
 | decimals | 18 |
 | isActive | true |
 | isFrozen | false |
-| supplyCap | 100 cbETH |
-| borrowCap | 20 cbETH |
+| supplyCap | 1,000 cbETH |
+| borrowCap | 100 cbETH |
 | debtCeiling | 0 $ |
 | isSiloed | false |
 | isFlashloanable | true |
@@ -49,10 +49,10 @@
 | variableRateSlope2 | 300 % |
 | baseStableBorrowRate | 10 % |
 | stableRateSlope1 | 4 % |
-| stableRateSlope2 | 80 % |
+| stableRateSlope2 | 300 % |
 | optimalStableToTotalDebtRatio | 20 % |
 | maxExcessStableToTotalDebtRatio | 80 % |
-| interestRate | ![ir](/.assets/d8ec385d6b8893e60510509683cd54ae8b9122ff.svg) |
+| interestRate | ![ir](/.assets/5edd71ae19daa3f5eddb02bba18dea258de81aac.svg) |
 | eMode.label | ETH correlated |
 | eMode.ltv | 90 % |
 | eMode.liquidationThreshold | 93 % |
@@ -67,8 +67,8 @@
 | decimals | 18 |
 | isActive | true |
 | isFrozen | false |
-| supplyCap | 200 WETH |
-| borrowCap | 160 WETH |
+| supplyCap | 5,000 WETH |
+| borrowCap | 4,000 WETH |
 | debtCeiling | 0 $ |
 | isSiloed | false |
 | isFlashloanable | true |
@@ -125,8 +125,8 @@
 | decimals | 6 |
 | isActive | true |
 | isFrozen | false |
-| supplyCap | 1,000,000 USDbC |
-| borrowCap | 800,000 USDbC |
+| supplyCap | 8,000,000 USDbC |
+| borrowCap | 6,500,000 USDbC |
 | debtCeiling | 0 $ |
 | isSiloed | false |
 | isFlashloanable | true |
@@ -202,7 +202,7 @@
         "aTokenImpl": "0x98F409Fc4A42F34AE3c326c7f48ED01ae8cAeC69",
         "aTokenName": "Aave Base cbETH",
         "aTokenSymbol": "aBascbETH",
-        "borrowCap": 20,
+        "borrowCap": 100,
         "borrowingEnabled": true,
         "debtCeiling": 0,
         "decimals": 18,
@@ -228,7 +228,7 @@
         "stableDebtTokenImpl": "0xe0b9B4f959fa8B52B7228c8D78875482b8813349",
         "stableDebtTokenName": "Aave Base Stable Debt cbETH",
         "stableDebtTokenSymbol": "stableDebtBascbETH",
-        "supplyCap": 100,
+        "supplyCap": 1000,
         "symbol": "cbETH",
         "underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
         "usageAsCollateralEnabled": true,
@@ -245,7 +245,7 @@
         "aTokenImpl": "0x98F409Fc4A42F34AE3c326c7f48ED01ae8cAeC69",
         "aTokenName": "Aave Base WETH",
         "aTokenSymbol": "aBasWETH",
-        "borrowCap": 160,
+        "borrowCap": 4000,
         "borrowingEnabled": true,
         "debtCeiling": 0,
         "decimals": 18,
@@ -271,7 +271,7 @@
         "stableDebtTokenImpl": "0xe0b9B4f959fa8B52B7228c8D78875482b8813349",
         "stableDebtTokenName": "Aave Base Stable Debt WETH",
         "stableDebtTokenSymbol": "stableDebtBasWETH",
-        "supplyCap": 200,
+        "supplyCap": 5000,
         "symbol": "WETH",
         "underlying": "0x4200000000000000000000000000000000000006",
         "usageAsCollateralEnabled": true,
@@ -288,7 +288,7 @@
         "aTokenImpl": "0x98F409Fc4A42F34AE3c326c7f48ED01ae8cAeC69",
         "aTokenName": "Aave Base USDbC",
         "aTokenSymbol": "aBasUSDbC",
-        "borrowCap": 800000,
+        "borrowCap": 6500000,
         "borrowingEnabled": true,
         "debtCeiling": 0,
         "decimals": 6,
@@ -314,7 +314,7 @@
         "stableDebtTokenImpl": "0xe0b9B4f959fa8B52B7228c8D78875482b8813349",
         "stableDebtTokenName": "Aave Base Stable Debt USDbC",
         "stableDebtTokenSymbol": "stableDebtBasUSDbC",
-        "supplyCap": 1000000,
+        "supplyCap": 8000000,
         "symbol": "USDbC",
         "underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
         "usageAsCollateralEnabled": true,
@@ -336,7 +336,7 @@
         "optimalStableToTotalDebtRatio": "200000000000000000000000000",
         "optimalUsageRatio": "450000000000000000000000000",
         "stableRateSlope1": "40000000000000000000000000",
-        "stableRateSlope2": "800000000000000000000000000",
+        "stableRateSlope2": "3000000000000000000000000000",
         "variableRateSlope1": "70000000000000000000000000",
         "variableRateSlope2": "3000000000000000000000000000"
       }
