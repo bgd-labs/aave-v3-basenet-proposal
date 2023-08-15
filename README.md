@@ -4,7 +4,7 @@ This proposal allows the Aave governance to activate the Aave V3 Base pool (3.0.
 
 ## Motivation
 
-By enabling Base on Aave, it creates valuable (and differentiated) revenue opportunities for Aave, capturing the growth and interest of users who live on the Coinbase platform.
+The Base and Coinbase ecosystem is a good opportunity of expansion for Aave, touching into the new user base and exploring fresh use cases.
 
 Aave community has approved the expansion on the [governance forum](https://governance.aave.com/t/arfc-aave-v3-deployment-on-base/13708) and [snapshot](https://snapshot.org/#/aave.eth/proposal/0xa8b018962096aa1fc22446a395d4298ebb6ca10094f35d072fbb02048e3b5eab).
 

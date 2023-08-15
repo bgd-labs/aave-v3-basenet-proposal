@@ -70,8 +70,8 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
       liqThreshold: 83_00,
       liqBonus: 5_00,
       reserveFactor: 15_00,
-      supplyCap: 200,
-      borrowCap: 160,
+      supplyCap: 5_000,
+      borrowCap: 4_000,
       debtCeiling: 0,
       liqProtocolFee: 10_00,
       eModeCategory: 1
@@ -101,8 +101,8 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
       liqThreshold: 74_00,
       liqBonus: 7_50,
       reserveFactor: 15_00,
-      supplyCap: 100,
-      borrowCap: 20,
+      supplyCap: 1_000,
+      borrowCap: 100,
       debtCeiling: 0,
       liqProtocolFee: 10_00,
       eModeCategory: 1
@@ -132,8 +132,8 @@ contract AaveV3_BaseActivation is AaveV3PayloadBasenet {
       liqThreshold: 80_00,
       liqBonus: 5_00,
       reserveFactor: 10_00,
-      supplyCap: 1_000_000,
-      borrowCap: 800_000,
+      supplyCap: 8_000_000,
+      borrowCap: 6_500_000,
       debtCeiling: 0,
       liqProtocolFee: 10_00,
       eModeCategory: 0
